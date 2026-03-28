@@ -1,0 +1,130 @@
+@import url('https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;500;600;700&family=Inter:wght@400;500;600;700&family=Playfair+Display:ital,wght@0,400;0,500;0,600;0,700;1,400;1,500;1,600;1,700&display=swap');
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  :root {
+    --background: 40 20% 97%;
+    --foreground: 0 0% 4%;
+    --card: 0 0% 100%;
+    --card-foreground: 0 0% 4%;
+    --popover: 0 0% 100%;
+    --popover-foreground: 0 0% 4%;
+    --primary: 215 70% 14%;
+    --primary-foreground: 43 50% 54%;
+    --secondary: 215 60% 22%;
+    --secondary-foreground: 40 20% 97%;
+    --muted: 40 20% 95%;
+    --muted-foreground: 215 15% 40%;
+    --accent: 43 50% 54%;
+    --accent-foreground: 215 70% 14%;
+    --destructive: 0 65% 51%;
+    --destructive-foreground: 0 0% 100%;
+    --border: 43 50% 54%;
+    --input: 215 30% 80%;
+    --ring: 43 50% 54%;
+    --radius: 4px;
+
+    /* Custom tokens */
+    --azul-profundo: 215 70% 14%;
+    --azul-rolex: 215 75% 21%;
+    --azul-medio: 215 67% 32%;
+    --dourado: 43 50% 54%;
+    --dourado-claro: 43 55% 65%;
+    --dourado-suave: 45 65% 80%;
+    --off-white: 40 20% 95%;
+    --cinza-texto: 215 15% 35%;
+    --preto-suave: 0 0% 4%;
+    --footer-bg: 215 75% 7%;
+
+    --sidebar-background: 0 0% 98%;
+    --sidebar-foreground: 240 5.3% 26.1%;
+    --sidebar-primary: 240 5.9% 10%;
+    --sidebar-primary-foreground: 0 0% 98%;
+    --sidebar-accent: 240 4.8% 95.9%;
+    --sidebar-accent-foreground: 240 5.9% 10%;
+    --sidebar-border: 220 13% 91%;
+    --sidebar-ring: 217.2 91.2% 59.8%;
+  }
+}
+
+@layer base {
+  * {
+    @apply border-border;
+  }
+  body {
+    @apply bg-background text-foreground;
+    font-family: 'Inter', sans-serif;
+  }
+  h1, h2, h3, h4 {
+    font-family: 'Cormorant Garamond', serif;
+  }
+}
+
+@layer components {
+  .font-cormorant {
+    font-family: 'Cormorant Garamond', serif;
+  }
+  .font-playfair {
+    font-family: 'Playfair Display', serif;
+  }
+  .font-inter {
+    font-family: 'Inter', sans-serif;
+  }
+  .btn-gold {
+    @apply bg-accent text-accent-foreground font-semibold tracking-wide transition-all duration-300;
+    border-radius: var(--radius);
+  }
+  .btn-gold:hover {
+    background-color: hsl(var(--dourado-claro));
+  }
+  .btn-outline-white {
+    @apply border border-white/40 text-white font-medium tracking-wide transition-all duration-300;
+    border-radius: var(--radius);
+    background: transparent;
+  }
+  .btn-outline-white:hover {
+    @apply bg-white/10;
+  }
+  .badge-gold {
+    @apply inline-block border border-accent/60 text-accent tracking-[0.2em] text-xs font-semibold uppercase px-4 py-1.5;
+    border-radius: var(--radius);
+  }
+  .section-dark {
+    background-color: hsl(var(--azul-profundo));
+    color: white;
+  }
+  .section-light {
+    background-color: hsl(var(--off-white));
+  }
+  .card-premium {
+    @apply bg-card shadow-md transition-all duration-300;
+    border-radius: var(--radius);
+  }
+  .card-premium:hover {
+    box-shadow: 0 8px 30px -10px hsl(var(--dourado) / 0.2);
+  }
+  .gold-line {
+    height: 1px;
+    background: linear-gradient(90deg, transparent, hsl(var(--dourado) / 0.5), transparent);
+  }
+  .diagonal-pattern {
+    background-image: url("data:image/svg+xml,%3Csvg width='40' height='40' viewBox='0 0 40 40' xmlns='http://www.w3.org/2000/svg'%3E%3Cg fill='none' stroke='%23C9A84C' stroke-width='0.5' stroke-opacity='0.05'%3E%3Cpath d='M0 40L40 0'/%3E%3C/g%3E%3C/svg%3E");
+  }
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+@keyframes pulse-glow {
+  0%, 100% { box-shadow: 0 0 0 0 rgba(37, 211, 102, 0.4); }
+  50% { box-shadow: 0 0 0 12px rgba(37, 211, 102, 0); }
+}
+
+@keyframes scroll-bounce {
+  0%, 100% { transform: translateY(0); }
+  50% { transform: translateY(8px); }
+}
