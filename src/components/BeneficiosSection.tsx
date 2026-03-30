@@ -1,6 +1,5 @@
 import { Shield, Banknote, HeartHandshake, CheckCircle, Award, type LucideIcon } from "lucide-react";
 import AnimatedSection from "./AnimatedSection";
-import { Carousel, CarouselContent, CarouselItem, CarouselNext, CarouselPrevious } from "@/components/ui/carousel";
 
 const benefits: { icon: LucideIcon; title: string; desc: string }[] = [
   { icon: Shield, title: "Proteção Patrimonial Estruturada", desc: "Seu patrimônio pessoal e empresarial protegido contra riscos jurídicos e execuções" },
@@ -23,34 +22,40 @@ const BeneficiosSection = () => (
       </AnimatedSection>
 
       <AnimatedSection>
-        <Carousel opts={{ align: "start", loop: true, watchDrag: true }} className="w-full" style={{ touchAction: "pan-y" }}>
-          <CarouselContent className="-ml-4" style={{ touchAction: "pan-y" }}>
-            {benefits.map((b, i) => {
-              const Icon = b.icon;
-              return (
-                <CarouselItem key={i} className="pl-4 sm:basis-1/2 lg:basis-1/3">
-                  <div
-                    className="card-premium p-5 h-full transition-all duration-300 border-t-[3px] border-l-2"
-                    style={{
-                      borderTopColor: "hsl(43, 50%, 54%)",
-                      borderLeftColor: "hsl(218, 68%, 14%, 0.15)",
-                    }}
-                  >
-                    <div className="mb-3">
-                      <Icon size={20} style={{ color: "hsl(43, 50%, 54%)" }} strokeWidth={1.5} />
-                    </div>
-                    <h3 className="font-cinzel text-base font-bold text-azul-profundo mb-2">{b.title}</h3>
-                    <p className="font-inter text-cinza-texto text-sm leading-relaxed">{b.desc}</p>
-                  </div>
-                </CarouselItem>
-              );
-            })}
-          </CarouselContent>
-          <div className="flex items-center justify-center gap-4 mt-6 sm:mt-8">
-            <CarouselPrevious className="static translate-y-0 bg-dourado border-dourado text-azul-profundo hover:bg-dourado/80 hover:border-dourado/80" />
-            <CarouselNext className="static translate-y-0 bg-dourado border-dourado text-azul-profundo hover:bg-dourado/80 hover:border-dourado/80" />
-          </div>
-        </Carousel>
+        {/* Scroll snap nativo — funciona em todos os dispositivos incluindo iOS */}
+        <div
+          className="flex gap-4 pb-4 lg:grid lg:grid-cols-3 lg:gap-6"
+          style={{
+            overflowX: "auto",
+            scrollSnapType: "x mandatory",
+            WebkitOverflowScrolling: "touch",
+            scrollbarWidth: "none",
+            msOverflowStyle: "none",
+          }}
+        >
+          {benefits.map((b, i) => {
+            const Icon = b.icon;
+            return (
+              <div
+                key={i}
+                className="card-premium p-5 border-t-[3px] border-l-2 flex-shrink-0"
+                style={{
+                  borderTopColor: "hsl(43, 50%, 54%)",
+                  borderLeftColor: "hsl(218, 68%, 14%, 0.15)",
+                  scrollSnapAlign: "start",
+                  minWidth: "80vw",
+                  maxWidth: "80vw",
+                }}
+              >
+                <div className="mb-3">
+                  <Icon size={20} style={{ color: "hsl(43, 50%, 54%)" }} strokeWidth={1.5} />
+                </div>
+                <h3 className="font-cinzel text-base font-bold text-azul-profundo mb-2">{b.title}</h3>
+                <p className="font-inter text-cinza-texto text-sm leading-relaxed">{b.desc}</p>
+              </div>
+            );
+          })}
+        </div>
       </AnimatedSection>
 
       <AnimatedSection>
