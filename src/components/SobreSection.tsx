@@ -32,17 +32,14 @@ const SobreSection = () => (
             Seu parceiro estratégico em segurança jurídica empresarial
           </h2>
           <p className="font-inter text-cinza-texto leading-relaxed mb-4">
-            Na MB Advocacia, cada cliente é tratado de forma única.
+            À frente da atuação está <span className="font-semibold text-azul-profundo">Marcelo Bueno</span>, advogado estrategista e sócio, com mais de duas décadas de experiência, dedicado a estruturar soluções jurídicas que protegem empresas, patrimônio e decisões empresariais. Ao longo de sua trajetória, desenvolveu uma abordagem que vai além da resolução de problemas, com foco na antecipação de riscos e na construção de estruturas jurídicas seguras e eficientes.
           </p>
-          <p className="font-inter text-cinza-texto leading-relaxed mb-6">
-            Sabemos que por trás de cada empresa existem decisões importantes, riscos reais e anos de construção que precisam ser protegidos com seriedade e estratégia.
-          </p>
-          <p className="font-inter text-cinza-texto leading-relaxed mb-6">
-            Por isso, nossa atuação vai além do jurídico tradicional.
+          <p className="font-inter text-cinza-texto leading-relaxed mb-4">
+            A partir dessa visão, nasce a MB Advocacia, um escritório voltado à segurança jurídica empresarial, com atuação integrada nas áreas empresarial, trabalhista e cível. Na MB Advocacia, cada cliente é tratado de forma única, pois entendemos que por trás de cada empresa existem decisões relevantes, responsabilidades reais e anos de construção que não podem ser expostos a riscos desnecessários.
           </p>
           <blockquote className="border-l-[3px] border-dourado pl-5 sm:pl-6 py-2">
             <p className="font-cinzel text-dourado text-sm sm:text-base leading-relaxed">
-              Nosso compromisso é entender profundamente a realidade da sua empresa para oferecer soluções personalizadas, seguras e eficazes.
+              Cada caso é analisado de forma individual, com estratégias personalizadas e acompanhamento próximo e contínuo. Aqui, você não recebe soluções genéricas, mas sim uma estrutura jurídica pensada para a realidade do seu negócio.
             </p>
           </blockquote>
         </AnimatedSection>
