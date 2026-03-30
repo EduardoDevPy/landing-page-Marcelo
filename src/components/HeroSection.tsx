@@ -1,3 +1,4 @@
+import { ChevronDown } from "lucide-react";
 import heroImg from "@/assets/marcelo2.jpeg";
 
 const WHATSAPP_URL = "https://wa.me/55XXXXXXXXXXX";
@@ -19,7 +20,7 @@ const HeroSection = () => {
       <div className="w-full lg:w-1/2 bg-azul-profundo diagonal-pattern relative flex items-center">
         {/* Large MB outline — reduced size on mobile to prevent overflow */}
         <span
-          className="absolute top-[75%] lg:top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 font-cormorant text-[160px] sm:text-[220px] lg:text-[280px] font-bold select-none pointer-events-none"
+          className="absolute top-[88%] lg:top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 font-cinzel text-[160px] sm:text-[220px] lg:text-[280px] font-bold select-none pointer-events-none"
           style={{
             WebkitTextStroke: "2px hsl(43, 50%, 54%)",
             WebkitTextFillColor: "transparent",
@@ -43,47 +44,41 @@ const HeroSection = () => {
              Proteção Empresarial Estratégica
           </div>
 
-          <h1 className="font-cormorant text-3xl sm:text-4xl lg:text-6xl font-bold text-white leading-tight mb-5 sm:mb-6" style={{ textShadow: "0 2px 16px rgba(0,0,0,0.9), 0 1px 4px rgba(0,0,0,0.7)" }}>
-            Compliance Trabalhista:{" "}
-            <span className="font-playfair italic text-dourado">Seu Escudo</span>{" "}
-            Contra Riscos.
+          <h1 className="font-cinzel text-xl sm:text-2xl lg:text-4xl font-bold text-white leading-tight mb-5 sm:mb-6" style={{ textShadow: "0 2px 16px rgba(0,0,0,0.9), 0 1px 4px rgba(0,0,0,0.7)" }}>
+            Segurança jurídica completa para sua empresa, patrimônio e{" "}
+            <span className="font-cinzel text-dourado">decisões estratégicas.</span>
           </h1>
 
           <p className="font-inter text-white/75 text-sm sm:text-base lg:text-lg leading-relaxed mb-8 sm:mb-10 max-w-md" style={{ textShadow: "0 1px 8px rgba(0,0,0,0.8)" }}>
-            Elimine passivos ocultos e proteja o caixa da sua empresa. Reduza até
-            80% dos riscos jurídicos com blindagem preventiva de elite.
+            Atuação especializada em direito empresarial, trabalhista e cível para empresários que não podem correr riscos.
           </p>
 
-          <div className="flex flex-col sm:flex-row gap-3 sm:gap-4">
-            <a
-              href={WHATSAPP_URL}
-              target="_blank"
-              rel="noopener noreferrer"
-              className="btn-gold px-6 py-4 text-sm uppercase tracking-wider text-center flex items-center justify-center gap-2 w-full sm:w-auto"
-            >
-              Falar com Especialista
-            </a>
-            <a
-              href="#contato"
-              className="btn-outline-white px-6 py-4 text-sm uppercase tracking-wider text-center w-full sm:w-auto"
-            >
-              Consulta Estratégica
-            </a>
-          </div>
+          <a
+            href={WHATSAPP_URL}
+            target="_blank"
+            rel="noopener noreferrer"
+            className="btn-gold px-8 py-4 text-sm uppercase tracking-wider text-center inline-block w-full sm:w-auto"
+          >
+            Quero proteger meu patrimônio
+          </a>
         </div>
       </div>
 
-      {/* Scroll indicator */}
+      {/* Scroll indicator — mouse on desktop, arrow on mobile/tablet */}
       <div className="absolute bottom-8 left-1/2 -translate-x-1/2 flex flex-col items-center gap-2">
-        <span className="font-inter text-[10px] tracking-widest uppercase text-white/40">Scroll</span>
-        <div
-          className="w-5 h-8 border border-white/30 rounded-full flex justify-center pt-1.5"
-        >
-          <div
-            className="w-1 h-2 bg-dourado rounded-full"
-            style={{ animation: "scroll-bounce 2s infinite" }}
-          />
+
+        {/* Mouse — desktop only */}
+        <div className="hidden lg:flex w-5 h-8 border border-white/30 rounded-full justify-center pt-1.5">
+          <div className="w-1 h-2 bg-dourado rounded-full" style={{ animation: "scroll-bounce 2s infinite" }} />
         </div>
+
+        {/* Arrow — mobile/tablet only */}
+        <ChevronDown
+          className="lg:hidden text-dourado"
+          size={22}
+          strokeWidth={1.5}
+          style={{ animation: "scroll-bounce 2s infinite" }}
+        />
       </div>
     </section>
   );

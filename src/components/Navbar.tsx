@@ -1,5 +1,7 @@
 import { useState, useEffect } from "react";
 import { Menu, X } from "lucide-react";
+import logoDourado from "@/assets/logo-Dourado2.png";
+
 
 const WHATSAPP_URL = "https://wa.me/55XXXXXXXXXXX";
 
@@ -34,16 +36,8 @@ const Navbar = () => {
     >
       <div className="container mx-auto flex items-center justify-between px-4 py-3 lg:py-4">
         {/* Logo */}
-        <a href="#inicio" className="flex items-center gap-3">
-          <span className="font-cormorant text-2xl font-bold text-dourado tracking-wide">MB</span>
-          <div className="hidden sm:block">
-            <span className="font-inter text-sm font-semibold tracking-[0.15em] text-white uppercase block leading-tight">
-              Marcelo Bueno
-            </span>
-            <span className="font-inter text-[10px] tracking-[0.3em] text-white/60 uppercase block">
-              Advocacia
-            </span>
-          </div>
+        <a href="#inicio">
+          <img src={logoDourado} alt="Marcelo Bueno Advocacia" className="h-8 lg:h-10 w-auto" />
         </a>
 
         {/* Desktop Links */}

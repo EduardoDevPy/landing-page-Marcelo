@@ -1,3 +1,5 @@
+import logoBranco from "@/assets/logo-Branco.png";
+
 const Footer = () => (
   <footer className="bg-footer-bg relative">
     <div className="gold-line" />
@@ -5,23 +7,13 @@ const Footer = () => (
       <div className="flex flex-col lg:flex-row items-center justify-between gap-4 text-center lg:text-left">
         {/* Logo */}
         <div className="text-center lg:text-left">
-          <div className="flex items-center justify-center lg:justify-start gap-3 mb-2">
-            <span className="font-cormorant text-2xl font-bold text-dourado">MB</span>
-            <div>
-              <span className="font-inter text-sm font-semibold tracking-[0.15em] text-white/90 uppercase block leading-tight">
-                Marcelo Bueno
-              </span>
-              <span className="font-inter text-[10px] tracking-[0.3em] text-white/50 uppercase block">
-                Advocacia
-              </span>
-            </div>
-          </div>
+          <img src={logoBranco} alt="Marcelo Bueno Advocacia" className="h-10 w-auto scale-[2] origin-center lg:origin-left mb-1" />
           <p className="font-inter text-white/40 text-xs">Compliance Trabalhista Empresarial</p>
         </div>
 
         {/* Links */}
         <div className="flex flex-wrap justify-center gap-4 sm:gap-6">
-          {["Início", "Serviços", "Contato", "Política de Privacidade"].map((l) => (
+          {["Início", "Serviços", "Contato"].map((l) => (
             <a
               key={l}
               href={l === "Política de Privacidade" ? "#" : `#${l.toLowerCase().normalize("NFD").replace(/[\u0300-\u036f]/g, "")}`}

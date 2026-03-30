@@ -2,7 +2,7 @@ import lawyerAbout from "@/assets/marcelo2.jpeg";
 import AnimatedSection from "./AnimatedSection";
 
 const SobreSection = () => (
-  <section id="sobre" className="bg-card py-14 lg:py-28">
+  <section id="sobre" className="bg-card diagonal-pattern-blue py-14 lg:py-28">
     <div className="container mx-auto px-4 sm:px-6">
       <div className="grid lg:grid-cols-2 gap-10 lg:gap-20 items-center">
         {/* Photo */}
@@ -21,11 +21,6 @@ const SobreSection = () => (
                 width={800}
                 height={1000}
               />
-              <div className="absolute bottom-4 left-4 bg-azul-profundo/95 px-3 sm:px-4 py-2 rounded-sm">
-                <span className="font-inter text-xs text-dourado tracking-wider">
-                  🏆 Membro MAV&apos;S Business Club
-                </span>
-              </div>
             </div>
           </div>
         </AnimatedSection>
@@ -33,23 +28,21 @@ const SobreSection = () => (
         {/* Text */}
         <AnimatedSection delay={200}>
           <span className="badge-gold mb-4 inline-block">Quem Somos</span>
-          <h2 className="font-cormorant text-2xl sm:text-3xl lg:text-4xl font-bold text-azul-profundo mb-6">
-            Seu Parceiro Estratégico em Proteção Empresarial
+          <h2 className="font-cinzel text-xl sm:text-2xl lg:text-3xl font-bold text-azul-profundo mb-6">
+            Seu parceiro estratégico em segurança jurídica empresarial
           </h2>
           <p className="font-inter text-cinza-texto leading-relaxed mb-4">
-            A MB Advocacia nasceu com um propósito claro: transformar a complexidade
-            jurídica trabalhista em vantagem competitiva para empresários que querem
-            crescer sem medo.
+            Na MB Advocacia, cada cliente é tratado de forma única.
           </p>
           <p className="font-inter text-cinza-texto leading-relaxed mb-6">
-            Somos especialistas em Compliance Trabalhista Empresarial, com abordagem
-            100% preventiva e estratégica. Não esperamos o problema chegar, nós o
-            eliminamos antes.
+            Sabemos que por trás de cada empresa existem decisões importantes, riscos reais e anos de construção que precisam ser protegidos com seriedade e estratégia.
+          </p>
+          <p className="font-inter text-cinza-texto leading-relaxed mb-6">
+            Por isso, nossa atuação vai além do jurídico tradicional.
           </p>
           <blockquote className="border-l-[3px] border-dourado pl-5 sm:pl-6 py-2">
-            <p className="font-playfair italic text-dourado text-base sm:text-lg leading-relaxed">
-              Transformamos complexidade jurídica em estratégia empresarial
-              descomplicada. Foco em resultados, não em horas faturadas.
+            <p className="font-cinzel text-dourado text-sm sm:text-base leading-relaxed">
+              Nosso compromisso é entender profundamente a realidade da sua empresa para oferecer soluções personalizadas, seguras e eficazes.
             </p>
           </blockquote>
         </AnimatedSection>
