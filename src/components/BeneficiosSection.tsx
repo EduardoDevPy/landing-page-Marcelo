@@ -17,14 +17,14 @@ const BeneficiosSection = () => (
         <div className="text-center mb-10 sm:mb-14">
           <span className="badge-gold mb-4 inline-block">Benefícios</span>
           <h2 className="font-cinzel text-xl sm:text-2xl lg:text-4xl font-bold text-azul-profundo">
-            O que sua empresa ganha ao estruturar sua segurança jurídica
+            O que a empresa ganha ao estruturar sua segurança jurídica
           </h2>
         </div>
       </AnimatedSection>
 
       <AnimatedSection>
-        <Carousel opts={{ align: "start", loop: true }} className="w-full overflow-hidden">
-          <CarouselContent className="-ml-4">
+        <Carousel opts={{ align: "start", loop: true, watchDrag: true }} className="w-full" style={{ touchAction: "pan-y" }}>
+          <CarouselContent className="-ml-4" style={{ touchAction: "pan-y" }}>
             {benefits.map((b, i) => {
               const Icon = b.icon;
               return (
