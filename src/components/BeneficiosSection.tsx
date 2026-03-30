@@ -24,7 +24,7 @@ const BeneficiosSection = () => (
       <AnimatedSection>
         {/* Scroll snap nativo — funciona em todos os dispositivos incluindo iOS */}
         <div
-          className="flex gap-4 pb-4 lg:grid lg:grid-cols-3 lg:gap-6"
+          className="flex gap-4 pb-4 lg:grid lg:grid-cols-3 lg:gap-6 lg:overflow-visible lg:pb-0"
           style={{
             overflowX: "auto",
             scrollSnapType: "x mandatory",
@@ -38,13 +38,11 @@ const BeneficiosSection = () => (
             return (
               <div
                 key={i}
-                className="card-premium p-5 border-t-[3px] border-l-2 flex-shrink-0"
+                className="card-premium p-5 border-t-[3px] border-l-2 flex-shrink-0 w-[78vw] sm:w-[45vw] lg:w-auto lg:flex-shrink"
                 style={{
                   borderTopColor: "hsl(43, 50%, 54%)",
                   borderLeftColor: "hsl(218, 68%, 14%, 0.15)",
                   scrollSnapAlign: "start",
-                  minWidth: "80vw",
-                  maxWidth: "80vw",
                 }}
               >
                 <div className="mb-3">
