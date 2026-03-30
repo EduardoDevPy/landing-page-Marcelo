@@ -1,8 +1,7 @@
 import { Building2, HardHat, FileText, type LucideIcon } from "lucide-react";
 import AnimatedSection from "./AnimatedSection";
 import justiceBg from "@/assets/justice-bg.jpg";
-
-const WHATSAPP_URL = "https://wa.me/55XXXXXXXXXXX";
+import { WHATSAPP_URL } from "@/lib/constants";
 
 const areas: {
   icon: LucideIcon;

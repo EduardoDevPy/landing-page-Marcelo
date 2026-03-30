@@ -1,9 +1,7 @@
 import { useState, useEffect } from "react";
 import { Menu, X } from "lucide-react";
 import logoDourado from "@/assets/logo-Dourado2.png";
-
-
-const WHATSAPP_URL = "https://wa.me/55XXXXXXXXXXX";
+import { WHATSAPP_URL } from "@/lib/constants";
 
 const navLinks = [
   { label: "Início", href: "#inicio" },
@@ -11,7 +9,7 @@ const navLinks = [
   { label: "Sobre", href: "#sobre" },
   { label: "Serviços", href: "#servicos" },
   { label: "Como Funciona", href: "#metodologia" },
-  { label: "Depoimentos", href: "#depoimentos" },
+  { label: "Dúvidas", href: "#duvidas" },
   { label: "Contato", href: "#contato" },
 ];
 

@@ -1,6 +1,5 @@
 import AnimatedSection from "./AnimatedSection";
-
-const WHATSAPP_URL = "https://wa.me/55XXXXXXXXXXX";
+import { WHATSAPP_URL } from "@/lib/constants";
 
 const CtaFinalSection = () => (
   <section id="contato" className="section-dark diagonal-pattern relative py-12 lg:py-20">

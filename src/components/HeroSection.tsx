@@ -1,7 +1,6 @@
 import { ChevronDown } from "lucide-react";
 import heroImg from "@/assets/marcelo2.jpeg";
-
-const WHATSAPP_URL = "https://wa.me/55XXXXXXXXXXX";
+import { WHATSAPP_URL } from "@/lib/constants";
 
 const HeroSection = () => {
   return (

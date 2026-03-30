@@ -6,7 +6,7 @@ const Footer = () => (
     <div className="container mx-auto px-4 sm:px-6 py-6">
       <div className="flex flex-col lg:flex-row items-center justify-between gap-4 text-center lg:text-left">
         {/* Logo */}
-        <div className="text-center lg:text-left">
+        <div className="flex flex-col items-center lg:items-start">
           <img src={logoBranco} alt="Marcelo Bueno Advocacia" className="h-10 w-auto scale-[2] origin-center lg:origin-left mb-1" />
           <p className="font-inter text-white/40 text-xs">Compliance Trabalhista Empresarial</p>
         </div>

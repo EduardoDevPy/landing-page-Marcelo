@@ -1,7 +1,6 @@
 import { AlertTriangle, Scale, ShieldOff, TrendingDown, Lock, FileX, type LucideIcon } from "lucide-react";
 import AnimatedSection from "./AnimatedSection";
-
-const WHATSAPP_URL = "https://wa.me/55XXXXXXXXXXX";
+import { WHATSAPP_URL } from "@/lib/constants";
 
 const problems: { icon: LucideIcon; title: string; desc: string }[] = [
   { icon: AlertTriangle, title: "Ações trabalhistas inesperadas", desc: "Processos surgem sem aviso e podem gerar condenações que impactam diretamente o caixa da empresa" },
